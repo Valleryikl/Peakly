@@ -1,0 +1,19 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Mountain {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  name      String
+  country   String
+  elevation Int
+  rank      Int
+  coords    String?   // координаты
+  photoUrl  String?   // фото
+}
