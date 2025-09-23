@@ -3,6 +3,7 @@ const prisma = new PrismaClient();
 
 async function main() {
   await prisma.mountain.deleteMany();
+  await prisma.vulcan.deleteMany();
 
   await prisma.mountain.createMany({
     data: [
@@ -66,6 +67,35 @@ async function main() {
         photoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/19/Makalu.jpg",
         videoUrl: "https://youtu.be/XFXpPWGwd7E",
       },
+    ]
+  });
+
+  await prisma.vulcan.createMany ({
+    data: [
+      {
+        id: 1,
+        rank: 1,
+        name: "Ojos del Salado",
+        country: "Argentina/Chile",
+        elevation: 6893,
+        slogan: "Ojos del Salado – Where Fire Meets the Sky",
+        description: "Ojos del Salado rises to 6,893 m (22,615 ft), making it the world’s highest volcano and Chile’s tallest peak. It straddles the Argentina–Chile border in the heart of the Andes, surrounded by stunning desert landscapes. The summit hosts the planet’s highest permanent lake at over 6,480 m (21,260 ft) above sea level. This dormant giant consists of overlapping lava domes, craters, and volcanic flows with minimal ice cover. Its extreme altitude and arid climate create one of the most unique high-mountain environments on Earth.",
+        coords: "27.109°S 68.541°W",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Ojos_del_Salado_looming_big_on_the_horizon.jpg/1280px-Ojos_del_Salado_looming_big_on_the_horizon.jpg",
+        videoUrl: "https://youtu.be/2uZTgmz0jrs",
+      },
+      {
+        id: 2,
+        rank: 2,
+        name: "Monte Pissis",
+        country: "Argentina",
+        elevation: 6793,
+        slogan: "From Arid Plains to Frozen Heights",
+        description: "Monte Pissis is the world’s second-highest volcano at 6,793 m (22,287 ft), located in Argentina’s La Rioja and Catamarca provinces. Named after French geologist Pedro José Amadeo Pissis, it stands in the arid Atacama Desert. Despite the dry climate, Monte Pissis hosts one of the region’s largest glaciers, starting at 5,900 m (19,400 ft). It formed between 6.6 and 6.2 million years ago and is now extinct, offering an accessible but remote ascent. First climbed in 1937, it remains a challenging high-altitude destination with extreme cold and strong winds.",
+        coords: "27°45′19″S 68°47′57″W",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/b/be/Monte_Pissis.jpg",
+        videoUrl: "https://youtu.be/Em3I7dbewY0",
+      }
     ]
   });
 

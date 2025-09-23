@@ -19,3 +19,15 @@ model Mountain {
   photoUrl    String   // photo
   videoUrl    String?  // video
 }
+model Vulcan {
+  id          Int   @id 
+  rank        Int
+  name        String
+  country     String
+  elevation   Int
+  slogan      String?
+  description String?
+  coords      String?   // coords
+  photoUrl    String   // photo
+  videoUrl    String?  // video
+}
