@@ -8,12 +8,14 @@ generator client {
 }
 
 model Mountain {
-  id        String   @id @default(cuid())
-  slug      String   @unique
-  name      String
-  country   String
-  elevation Int
-  rank      Int
-  coords    String?   // координаты
-  photoUrl  String?   // фото
+  id          Int   @id 
+  rank        Int
+  name        String
+  country     String
+  elevation   Int
+  slogan      String?
+  description String?
+  coords      String?   // coords
+  photoUrl    String   // photo
+  videoUrl    String?  // video
 }
