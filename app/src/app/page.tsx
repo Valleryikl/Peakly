@@ -1,9 +1,13 @@
 import Hero from "@/components/Hero";
+import Nav from "@/components/NavBar";
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-    </main>
+    <>
+      <Nav />
+      <main>
+        <Hero />
+      </main>
+    </>
   );
 }
