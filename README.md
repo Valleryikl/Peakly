@@ -85,3 +85,6 @@ Open http://localhost:3000 in your browser.
 Keep **.env** secret. Never commit real passwords or production keys.
 
 ---
+
+https://en.wikipedia.org/wiki/List_of_highest_mountains_on_Earth
+https://en.wikipedia.org/wiki/List_of_volcanoes_by_elevation
