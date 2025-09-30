@@ -7,10 +7,10 @@ export default function Nav() {
   const [open, setOpen] = useState<null | "mountains" | "volcanoes">(null);
 
   return (
-    <nav className="flex items-center gap-8">
-      <Link href="/">Peakly</Link>
+    <nav className="flex items-center justify-between py-[20px] px-[100px] relative ">
+      <Link className="text-[40px] z-[11]" href="/">Peakly</Link>
 
-      <ul className="flex gap-6 w-full">
+      <ul className="flex gap-[20px] text-[20px] z-[11]">
         <li><Link href="/">Home</Link></li>
         <li><Link href="/about">About</Link></li>
 
@@ -21,7 +21,7 @@ export default function Nav() {
           onFocus={() => setOpen("mountains")}
           onBlur={() => setOpen(null)}
         >
-          <Link href="/mountains" className="block py-2">Mountains</Link>
+          <Link href="/mountains" className="block">Mountains</Link>
           <ul
             className={[
               "absolute left-[-210px] mt-1 w-[1520px] rounded p-2 bg-[#fff] backdrop-blur flex gap-5 justify-center items-center",
@@ -45,7 +45,7 @@ export default function Nav() {
           onFocus={() => setOpen("volcanoes")}
           onBlur={() => setOpen(null)}
         >
-          <Link href="/volcanoes" className="block py-2">Volcanoes</Link>
+          <Link href="/volcanoes" className="block">Volcanoes</Link>
           <ul
             className={[
               "absolute left-0 mt-1 w-44 rounded p-2 backdrop-blur",
@@ -63,6 +63,7 @@ export default function Nav() {
 
         <li><Link href="/contact">Contact</Link></li>
       </ul>
+      <div className="black-block"></div>
     </nav>
   );
 }
